@@ -1,0 +1,383 @@
+/* Coding2G0 (2024) Learn CSS Positions in 4 minutes YouTube. Available at: https://www.youtube.com/watch?v=YEmdHbQBCSQ (Accessed: 27 November 2025). */
+/* W3schools.com (no date) W3Schools Online Web Tutorials. Available at: https://www.w3schools.com/js/js_htmldom.asp (Accessed: 20 November 2025). */
+
+/* HEADER 2 */
+h2{
+	color : #f47721 ; 
+    font-size: clamp(35px, 1.6vw, 20px);
+}
+
+p{
+	font-size: 25px;
+}
+/* HEADER 1 */
+h1{
+	color : #f2be1a;
+	font-family : Arial , sans-serif ;
+    font-size: clamp(40px, 1.6vw, 24px);
+}
+
+/* IFRAME AND VIDEO */
+iframe,video{
+    width: 500px;
+	height: auto;
+	border : 0px;
+}
+
+/* IFRAME AND VIDEO WHEN SCREEN GETS TO 1000PX MAKES IFRAME AND VIDEO SMALLER */
+@media only screen and (max-width: 1000px) {
+	iframe , video {
+		width: 450px;
+		height: auto;
+		padding:10px;		
+		margin:12px;
+
+	}
+}
+
+/* IFRAME AND VIDEO WHEN SCREEN GETS TO 500PX MAKES IFRAME AND VIDEO SMALLER */
+@media only screen and (max-width: 500px) {
+	iframe , video {
+		width: 300px;
+		height: auto;
+		padding:10px;
+		margin:12px;
+	}
+}
+
+
+/* TOP HEADER IN PAGE*/
+.header {
+	background-color:#BE1622;
+    color: white;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;                
+    justify-content: space-around; 
+    align-items: flex-start;     
+    flex-wrap: wrap;              
+}
+ 
+/* NAVIGATION BAR IN THE HEADER*/	
+.header nav{
+	width : 100%;
+	justify-content:space-between;
+	display:flex;   
+    align-items: center;         
+}	
+
+/* PARAGRAPHS IN THE NAVIGATION BAR IN THE HEADER*/	
+.header nav p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+	font-size: clamp(25px, 1.6vw, 18px);
+}
+
+/* UNORDERED LIST IN THE HEADERS NAVIGATION */	
+.header nav ul li {
+	display:inline-block;
+	list-style:none;
+	margin:10px 30px;
+}	
+
+/* REMOVES THE UNDERLINE FROM THE LINKS */	
+.header nav ul li a{
+	text-decoration:none;
+}	
+
+/* MAIN BODY */	
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(14px, 1.6vw, 18px);
+}
+
+/* ALL PARAGRAPHS OUTSIDE OF THE HEADER / FOOTER */	
+p {
+  font-size: clamp(30px, 1.6vw, 15px);
+  line-height: 1.6;
+  margin: 0 10px;
+}
+
+/* LOGO PICTURE OF UCLAN ON THE HEADER*/	
+#logo {
+    width: 200px; 
+    height: auto;
+}
+
+/* FOOTER IN HOME PAGE*/	
+.footer {
+	height : fit-content;
+    background-color:#0099d2;
+    color: white;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;               
+    justify-content: space-around; 
+    align-items: flex-start;      
+    flex-wrap: wrap;      
+	margin-top: auto;
+}
+
+/* PARAGRAPHS INSIDE THE FOOTER*/	
+.footer p {
+	font-size: clamp(25px, 1.6vw, 15px);
+}
+
+/* SUBTITLES OF THE FOOTER*/	
+.footer-title {
+	color:#f2be1a;
+	margin:0 5px;
+}
+
+/* FOR HAMBURGER MENU */	
+#menulist{
+	display:none;
+    background: #BE1622;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    list-style: none;
+    text-align: center;
+}
+#menulist li a {
+    text-decoration: none;        
+    color: white;
+    font-size: 24px;              
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* HAMBURGER MENU DOES NOT APPEAR UNTIL THE SCREEN GETS SMALLER */	
+#ham_menu{
+	display:none;
+}
+
+/* WHEN THE SCREEN GOES TO 1000PX THE LINK LIST DISSAPEARS AND HAMBURGER MENU APPEARS */	
+@media only screen and (max-width: 1000px) {
+  ul.items {
+    display: none;
+  }
+  #ham_menu{
+	  display:block;
+  }
+}
+
+#menulist.open { 
+display: block;
+ }
+ 
+/* BACKGROUND OF THE SHIRTS AND ALLIGNMENT OF TSHIRTS (3 PER ROW)*/	
+#products {
+	justify-items : center;
+	align-content:center;
+	align-items:center;
+	display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+}
+
+/* BACKGROUND OF THE SHIRTS AND ALLIGNMENT OF TSHIRTS WHEN SCREEN GETS SMALLER (2 PER ROW)*/	
+@media only screen and (max-width: 1000px) {
+	 #products
+	 {
+	align-content:center;
+	align-items:center;
+	justify-content:center;
+	display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+	}
+}
+	
+/* BACKGROUND OF THE SHIRTS AND ALLIGNMENT OF TSHIRTS WHEN SCREEN GETS SMALLER (1 PER ROW) */	
+@media only screen and (max-width: 750px) {
+	 #products
+	 {
+	align-content:center;
+	align-items:center;
+	justify-content:center;
+	display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+	}
+}	
+/* ALL PARAGRAPH LETTERS BOLD OF THE TSHIRTS */	
+#products p {
+	font-weight:bold;
+}
+
+/* EACH SHIRT BORDER AND BORDER RADIUS SIZE ,  BACKGROUND COLOUR(LIGHT BLUE)*/	
+.shirts{
+	height:450px;
+	padding:10px;
+	margin : 10px 10px;
+	justify-content:center;
+	background-color:#A4D3F2;
+	border : 2px solid black;
+	border-radius:5px;
+}
+
+/* SIZE OF TSHIRT IMAGES */	
+.shirts img {
+    width: 35%;
+    height: auto;
+}
+
+/* SIZE OF TSHIRT IMAGES WHEN SCREEN GETS SMALLER */	
+@media only screen and (max-width: 500px) {
+	.shirts img {
+		float:none;
+		width: 40%;
+		height: 40%;
+	}
+}	
+
+/*COLOUR OF PRICE OF SHIRT*/	
+.prices {
+    color: #BE1622;
+}
+
+/* FONT SIZE FOR THE SHIRTS PARAGRAPHS*/	
+.shirts p {
+	font-size:15px;
+}
+
+/* BUY BUTTON IN PRODUCTS PAGE + ITEM PAGE BUY BUTTON + READ MORE BUTTON */	
+button {
+    background:#BE1622;
+    color: white;
+    border: none;
+    padding: 10px;
+	margin : 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* BUY BUTTON HOVERS WHEN MOUSE IS ON THE BUTTON */	
+button:hover {
+    background: darkred;
+}
+
+/* THE OUT OF STOCK LABEL ON THE TSHIRTS THAT ARE OUT OF STOCK */	
+.availability{ 
+	display: block;
+    margin: 5px auto;      
+    color: white;
+    background-color: red;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 5px;
+    width: fit-content;
+	height : fit-content;
+}
+
+/* THE IMAGES IN THE ITEM PAGE */	
+.readmoreimg{
+	width : 40%;
+	height:auto;	
+}
+
+
+.readmorebutton{
+	width :80px;
+	height:50px;
+	background: #BE1622;
+    color: white;
+    border: none;
+    padding: 10px;
+	margin : 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* THE IMAGE FOR THE CART  */	
+.cartimg{
+	width:15%;
+	height:auto;
+}
+
+/* FOR THE CART DESIGN */	
+#cart {
+  width : 90%;
+  margin: 30px;
+  height : auto;
+}
+
+/* BACKGROUND FOR EACH ITEM IN CART + CREATES A GAP FOR EACH ELEMENT (IMAGE , PRICE , COLOR , NAME)  */	
+.cartdiv {
+    display: flex;
+	gap : 100px;
+    align-items: center;
+    border: 1px solid;
+    padding: 30px;
+    border-radius: 8px;
+    background:lightgrey;
+	margin-bottom:15px;
+	flex-wrap:wrap;
+}
+
+/* OFFERS IN THE HOME PAGE*/
+.homepageOffers {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 8px;
+    border-left: 6px solid blue;
+	border-right: 6px solid blue;
+	width:70%;
+}
+
+/* OFFERS IN THE HOME PAGE HEADING 3*/
+.homepageOffers h3{
+	color:red;
+	font-size:18px;
+	padding: 3px 6px;
+	background-color: yellow;
+}
+
+/* OFFERS IN THE HOME PAGE PARAGRAPH*/
+.homepageOffers p{
+	font-size:30px;
+}
+
+/*ERROR MESSAGES*/
+.error-messages {
+    background: #ffe6e6;
+    color: #cc0000;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/*ERROR MESSAGES*/
+.error-messages ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+form {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
